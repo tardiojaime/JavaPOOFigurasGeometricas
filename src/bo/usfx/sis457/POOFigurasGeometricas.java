@@ -21,16 +21,19 @@ public class POOFigurasGeometricas {
         Scanner entradaTeclado;
         int opcion;
         
-        System.out.println("+==================================================+");
-        System.out.println("| Programa: Figuras Geometricas                    |");
-        System.out.println("| - Ejemplo de Encapsulamiento                     |");
-        System.out.println("+==================================================+");
-        System.out.println("| Que desea realizar?                              |");
-        System.out.println("| 1) Calcular el area y perimetro de un Circulo    |");
-        System.out.println("| 2) Calcular el area y perimetro de un Cuadrado   |");
-        System.out.println("| 3) Calcular el area y perimetro de un Rectangulo |");
-        System.out.println("| *) Salir                                         |");
-        System.out.println("+==================================================+");
+        System.out.println("+============================================================+");
+        System.out.println("|           Programa: Figuras Geometricas                    |");
+        System.out.println("|          - Ejemplo de Encapsulamiento                      |");
+        System.out.println("+============================================================+");
+        System.out.println("|               Que desea realizar?                          |");
+        System.out.println("| 1) Calcular el area y perimetro de un Circulo              |");
+        System.out.println("| 2) Calcular el area y perimetro de un Cuadrado             |");
+        System.out.println("| 3) Calcular el area y perimetro de un Rectangulo           |");
+        System.out.println("| 4) Calcular el area y perimetro de una Elipse              |");
+        System.out.println("| 5) Calcular el area y perimetro de un Trapecio             |");
+        System.out.println("| 6) Calcular el area y perimetro de un Triangulo Rectangulo |");
+        System.out.println("| *) Salir                                                   |");
+        System.out.println("+============================================================+");
         entradaTeclado = new Scanner(System.in);
         opcion = entradaTeclado.nextInt();
         switch (opcion) {
@@ -76,8 +79,53 @@ public class POOFigurasGeometricas {
                 System.out.println("El Area del Rectangulo es: " + rectangulo.getArea());
                 System.out.println("El Perimetro del Rectangulo es: " + rectangulo.getPerimetro());
                 break;
-            default:
+                case 4:
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("|               SubPrograma:  Elipse               |");
+                System.out.println("+==================================================+");
+                System.out.println("Introduzca El Eje Mayor A:  ");
+                double EjeMayorA = entradaTeclado.nextDouble();
+                System.out.println("Introduzca El Eje Mayor B:  ");
+                double EjeMayorB = entradaTeclado.nextDouble();
+                Elipse e = new Elipse(EjeMayorA,EjeMayorB);
+                System.out.println("El Area de la Elipse es: "+e.getArea());
+                System.out.println("El Perimetro de la Elipse es: "+e.getPerimetro());
+                break;
+            case 5:
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Rectangulo                          |");
+                System.out.println("+==================================================+");
+                System.out.println("Introduzca el ladoA: ");
+                double a = entradaTeclado.nextDouble();
+                System.out.println("Introduzca el ladoB: ");
+                double b = entradaTeclado.nextDouble();
+                System.out.println("Introduzca el ladoC: ");
+                double c = entradaTeclado.nextDouble();
+                System.out.println("Introduzca La Altura Del Trapecio: ");
+                double h = entradaTeclado.nextDouble();
+                Trapecio t = new Trapecio(a,b,c,h);
+                System.out.println("El Area del Trapecio es: "+t.getArea());
+                System.out.println("El Perimetro del Trapecio es: "+t.getPerimetro());
+                break;
+            case 6:
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Rectangulo                          |");
+                System.out.println("+==================================================+");
+                System.out.println("Introduzca el cateto 1: ");
+                double c1 = entradaTeclado.nextDouble();
+                System.out.println("Introduzca el cateto 2: ");
+                double c2 = entradaTeclado.nextDouble();
+                System.out.println("Introduzca la hipotenusa: ");
+                double z = entradaTeclado.nextDouble();
+                Triangulo_Rectangulo q = new Triangulo_Rectangulo(c1,c2,z);
+                System.out.println("El Area del triangulo rectangulo es: "+q.getArea());
+                System.out.println("El perimetro del triangulo rectangulo es: "+q.getPerimetro());
+            case 7:
                 System.out.println("Salio del programa");
+                break;
         }
     }
     
