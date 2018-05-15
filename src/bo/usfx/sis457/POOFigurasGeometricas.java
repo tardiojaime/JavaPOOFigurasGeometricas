@@ -95,7 +95,7 @@ public class POOFigurasGeometricas {
             case 5:
                 limpiarConsola();
                 System.out.println("+==================================================+");
-                System.out.println("| SubPrograma: Rectangulo                          |");
+                System.out.println("| SubPrograma: Trapecio                            |");
                 System.out.println("+==================================================+");
                 System.out.println("Introduzca el ladoA: ");
                 double a = entradaTeclado.nextDouble();
@@ -112,7 +112,7 @@ public class POOFigurasGeometricas {
             case 6:
                 limpiarConsola();
                 System.out.println("+==================================================+");
-                System.out.println("| SubPrograma: Rectangulo                          |");
+                System.out.println("| SubPrograma: Triangulo Rectangulo                          |");
                 System.out.println("+==================================================+");
                 System.out.println("Introduzca el cateto 1: ");
                 double c1 = entradaTeclado.nextDouble();
